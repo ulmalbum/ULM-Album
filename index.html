@@ -1,67 +1,8 @@
 <!doctype html>
-<html lang="bn">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#10111a">
-<title> স্মৃতি | Smart Photo Album </title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="topbar">
-  <a class="brand" href="#"><span class="brand-mark">✦</span><span><b>স্মৃতি</b><small>YOUR PERSONAL PHOTO SPACE</small></span></a>
-  <div class="top-actions">
-    <button id="themeBtn" class="icon-btn" title="থিম বদলান">☼</button>
-    <button id="uploadBtn" class="primary">＋ ছবি যোগ করুন</button>
-    <input id="fileInput" type="file" accept="image/*" multiple hidden>
-  </div>
-</header>
-<main class="layout">
-  <aside class="sidebar">
-    <p class="eyebrow">LIBRARY</p>
-    <button class="nav-item active" data-view="all">▦ <span>সব ছবি</span><span id="allCount" class="count">0</span></button>
-    <button class="nav-item" data-view="favorites">♡ <span>প্রিয় ছবি</span></button>
-    <button class="nav-item" data-view="albums">▤ <span>অ্যালবাম</span></button>
-    <div class="side-rule"></div>
-    <p class="eyebrow">COLLECTIONS</p>
-    <div id="albumList" class="album-list"></div>
-    <button id="newAlbumBtn" class="subtle-btn">＋ নতুন অ্যালবাম</button>
-    <div class="side-bottom">
-      <div class="storage-icon">☁</div><b>আপনার ছবি, আপনার নিয়ন্ত্রণে</b>
-      <p>এই ডেমোতে ছবি আপনার ব্রাউজারেই থাকে। ব্যাকআপের জন্য Export ব্যবহার করুন।</p>
-      <button id="exportBtn" class="outline-btn">ডেটা Export করুন</button>
-      <button id="importBtn" class="outline-btn">Export Import করুন</button>
-      <input id="jsonInput" type="file" accept="application/json" hidden>
-    </div>
-  </aside>
-  <section class="content">
-    <div class="hero">
-      <div><p class="eyebrow">YOUR MOMENTS, BEAUTIFULLY KEPT</p><h1 id="pageTitle">আপনার স্মৃতির গ্যালারি</h1><p class="hero-sub">সব প্রিয় মুহূর্ত এক জায়গায়, আপনার পছন্দের স্টাইলে।</p></div>
-      <div class="hero-art" aria-hidden="true"><span class="orb orb1"></span><span class="orb orb2"></span><span class="orb orb3"></span><span class="spark">✦</span></div>
-    </div>
-    <div class="toolbar">
-      <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="ছবির নাম দিয়ে খুঁজুন..."></label>
-      <div class="toolbar-right">
-        <select id="sortSelect" aria-label="ছবি সাজান"><option value="newest">নতুন আগে</option><option value="oldest">পুরোনো আগে</option><option value="name">নাম অনুযায়ী</option></select>
-        <select id="styleSelect" aria-label="গ্যালারি স্টাইল"><option value="masonry">Masonry</option><option value="grid">গ্রিড</option><option value="polaroid">Polaroid</option></select>
-      </div>
-    </div>
-    <div class="source-strip">
-      <div><span class="source-dot"></span><span><b>ডিভাইসের ছবি</b><small>নিরাপদে যোগ করুন</small></span></div>
-      <button id="driveInfoBtn" class="source-link">Google Drive সংযোগের তথ্য ↗</button>
-      <button id="photosInfoBtn" class="source-link">Google Photos সংযোগের তথ্য ↗</button>
-    </div>
-    <div class="section-line"><span id="resultLabel">সব ছবি</span><span id="resultCount">0 ছবি</span></div>
-    <div id="gallery" class="gallery masonry"></div>
-    <div id="emptyState" class="empty-state"><div class="empty-icon">▧</div><h2>আপনার গ্যালারি এখনো খালি</h2><p>শুরু করতে আপনার ডিভাইস থেকে ছবি যোগ করুন।</p><button class="primary" id="emptyUploadBtn">＋ প্রথম ছবি যোগ করুন</button></div>
-  </section>
-</main>
-<div id="viewer" class="viewer" aria-hidden="true">
-  <button id="closeViewer" class="viewer-close" aria-label="বন্ধ করুন">×</button>
-  <button id="prevPhoto" class="viewer-arrow left" aria-label="আগের ছবি">‹</button>
-  <div class="viewer-main"><img id="viewerImage" alt=""><div class="viewer-caption"><b id="viewerName"></b><span id="viewerMeta"></span></div></div>
-  <button id="nextPhoto" class="viewer-arrow right" aria-label="পরের ছবি">›</button>
-</div>
-<div id="modal" class="modal" aria-hidden="true"><div class="modal-card"><button id="modalClose" class="modal-close">×</button><div id="modalContent"></div></div></div>
-<div id="toast" class="toast" role="status"></div>
-<script src="app.js"></script>
-</body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10131f"><meta name="description" content="ULM Smart Gallery — a modern 3D photo gallery"><title>ULM Smart Gallery</title><link rel="stylesheet" href="style.css"></head>
+<body><header class="top"><a class="brand" href="#"><span class="logo">U</span><span><b>ULM</b><small>SMART GALLERY</small></span></a><div><button id="theme" class="icon" aria-label="Toggle theme">☼</button><button id="backup" class="icon" title="Export backup">⇧ Backup</button><label class="icon" title="Import backup">↧ Import<input id="import" type="file" accept=".json,application/json" hidden></label></div></header>
+<main><section class="hero"><div><p class="eyebrow">✦ YOUR PERSONAL PHOTO SPACE</p><h1>Every memory,<br><em>beautifully framed.</em></h1><p class="intro">A little gallery for your biggest moments. Add photos, organize collections, and revisit the memories that matter.</p><div class="actions"><label class="primary">＋ Add photos<input id="upload" type="file" accept="image/*" multiple hidden></label><button id="newAlbum" class="secondary">＋ New album</button></div><div class="stats"><div><b id="count">0</b><small>PHOTOS</small></div><div><b id="albumsCount">1</b><small>ALBUMS</small></div><div><b id="favsCount">0</b><small>FAVORITES</small></div></div></div><div class="art" aria-hidden="true"><div class="orbit"></div><div class="mock back"></div><div class="mock side"></div><div class="mock front"><div class="landscape">YOUR<br>STORY</div><small>MEMORIES</small><b>Worth keeping.</b></div><span class="spark">✦</span></div></section>
+<section class="layout"><aside><p class="label">LIBRARY</p><button class="nav active" data-filter="all">▦　All photos <b id="allCount">0</b></button><button class="nav" data-filter="favorites">♡　Favorites <b id="favCount">0</b></button><p class="label album-label">YOUR ALBUMS <button id="plus" aria-label="Create album">＋</button></p><div id="albumList"></div><p class="note">✧ Photos stay in this browser on this device. Export a backup before clearing browser data.</p></aside>
+<div class="content"><div class="heading"><div><p class="eyebrow">YOUR COLLECTION</p><h2 id="title">All photos</h2><p class="sub">Your memories, in one place.</p></div><div><button class="icon view active" data-view="grid">▦</button><button class="icon view" data-view="compact">☷</button></div></div><div class="toolbar"><input id="search" type="search" placeholder="⌕  Search photos…"><select id="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="name">Name A–Z</option></select></div><div class="chips"><button class="chip active" data-kind="all">All</button><button class="chip" data-kind="favorites">♥ Favorites</button><button class="chip" data-kind="recent">Recently added</button></div><div id="gallery" class="gallery"></div><footer><span id="results">0 items</span><span>Made for your memories <b>✦</b></span></footer></div></section></main>
+<div id="modal" class="overlay" hidden><form id="albumForm" class="modal"><button type="button" id="close" class="close">×</button><p class="eyebrow">MAKE IT YOURS</p><h2>Create an album</h2><p class="sub">Give this collection a name you’ll remember.</p><label for="albumName">Album name</label><input id="albumName" required maxlength="40" placeholder="e.g. Family, Travel, Best days"><div class="actions end"><button type="button" id="cancel" class="secondary">Cancel</button><button class="primary" type="submit">Create album</button></div></form></div>
+<div id="lightbox" class="lightbox" hidden><button id="lbClose" class="lbclose">×</button><button id="prev" class="arrow">‹</button><figure><img id="large" alt=""><figcaption><b id="largeName"></b><span id="largeMeta"></span></figcaption></figure><button id="next" class="arrow">›</button></div><div id="toast" class="toast" role="status"></div><script src="app.js"></script></body></html>
